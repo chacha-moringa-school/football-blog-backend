@@ -1,0 +1,15 @@
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+/usr/share/rvm/rubies/ruby-3.1.2/bin/ruby -I /usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-dp8tpp sitelibdir\=./.gem.20230323-26388-dp8tpp clean
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-dp8tpp sitelibdir\=./.gem.20230323-26388-dp8tpp
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-dp8tpp sitelibdir\=./.gem.20230323-26388-dp8tpp install
+/bin/install -m 0755 bootsnap.so ./.gem.20230323-26388-dp8tpp/bootsnap

@@ -1,0 +1,17 @@
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+/usr/share/rvm/rubies/ruby-3.1.2/bin/ruby -I /usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-imubxw sitelibdir\=./.gem.20230323-26388-imubxw clean
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-imubxw sitelibdir\=./.gem.20230323-26388-imubxw
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-imubxw sitelibdir\=./.gem.20230323-26388-imubxw install
+/bin/install -m 0755 cparse.so ./.gem.20230323-26388-imubxw/racc

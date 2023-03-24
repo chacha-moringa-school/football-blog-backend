@@ -1,0 +1,19 @@
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+/usr/share/rvm/rubies/ruby-3.1.2/bin/ruby -I /usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for termios.h... yes
+checking for cfmakeraw() in termios.h... yes
+checking for sys/ioctl.h... yes
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-glhb2l sitelibdir\=./.gem.20230323-26388-glhb2l clean
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-glhb2l sitelibdir\=./.gem.20230323-26388-glhb2l
+compiling console.c
+linking shared-object io/console.so
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-glhb2l sitelibdir\=./.gem.20230323-26388-glhb2l install
+/bin/install -m 0755 console.so ./.gem.20230323-26388-glhb2l/io

@@ -1,0 +1,16 @@
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+/usr/share/rvm/rubies/ruby-3.1.2/bin/ruby -I /usr/share/rvm/rubies/ruby-3.1.2/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-xec9gs sitelibdir\=./.gem.20230323-26388-xec9gs clean
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-xec9gs sitelibdir\=./.gem.20230323-26388-xec9gs
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/chacha/Development/code/phase4/projects/moringa-projects/phase-4-project/football-blog-backend/vendor/bundle/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230323-26388-xec9gs sitelibdir\=./.gem.20230323-26388-xec9gs install
+/bin/install -m 0755 debug.so ./.gem.20230323-26388-xec9gs/debug
