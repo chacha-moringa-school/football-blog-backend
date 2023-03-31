@@ -1,5 +1,9 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: %i[ show update destroy ]
+  # before_action :set_blog, only: %i[ show update destroy ]
+  # before_action :authorize
+  # skip_before_action :authorize, only: [:index]
+  before_action :authorize_user, only: [:update, :destroy]
+
 
   # GET /blogs
   def index
@@ -10,12 +14,13 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   def show
-    render json: @blog
+    blog= Blog.find_by(id: params[:id])
+    render json: blog, status: :ok
   end
 
   # POST /blogs
   def create
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
 
     if @blog.save
       render json: @blog, status: :created, location: @blog
@@ -35,7 +40,8 @@ class BlogsController < ApplicationController
 
   # DELETE /blogs/1
   def destroy
-    @blog.destroy
+    blog = Blog.find_by(id: params[:id])
+    blog.destroy
   end
 
   private
@@ -46,6 +52,17 @@ class BlogsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_params
-      params.require(:blog).permit(:title, :news, :user_id)
+      params.require(:blog).permit(:image_url, :title, :news, :user_id)
+    end
+
+    def authorize
+      return render json: {message: "Kindly login"} unless session.include? :user_id
+    end
+
+    def authorize_user
+      blog = Blog.find(params[:id])
+      unless current_user == blog.user
+        render json: { error: 'You are not authorized to perform this action.' }, status: :unauthorized
+      end
     end
 end

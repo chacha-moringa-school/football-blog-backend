@@ -15,13 +15,18 @@ class LikesController < ApplicationController
 
   # POST /likes
   def create
-    @like = Like.new(like_params)
-
-    if @like.save
-      render json: @like, status: :created, location: @like
+    like = Like.create!(like_params)
+    if like
+      render json: like, status: :ok
     else
-      render json: @like.errors, status: :unprocessable_entity
+      render json: {message: "unable to like"}, status: :unprocessable_entity
     end
+    # existing_like = Like.find_by(user_id: current_user.id, blog_id: like.blog_id)
+    # if existing_like
+    #   render json: { error: 'You have already liked this blog post.' }, status: :unprocessable_entity
+    # else
+    #   render json: like.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /likes/1
@@ -35,7 +40,12 @@ class LikesController < ApplicationController
 
   # DELETE /likes/1
   def destroy
-    @like.destroy
+    like = Like.destroy_by_user(current_user.id, params[:blog_id])
+    if like.present?
+      head :no_content
+    else
+      render json: { error: 'You have not liked this blog post.' }, status: :unprocessable_entity
+    end
   end
 
   private
@@ -46,6 +56,6 @@ class LikesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def like_params
-      params.require(:like).permit(:blog_id, :user_id)
+      params.permit(:blog_id, :user_id)
     end
 end
