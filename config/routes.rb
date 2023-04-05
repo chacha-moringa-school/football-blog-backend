@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :dislikes
-  resources :likes
+  # resources :comments
+  # resources :dislikes
+  resources :likes, only: [:create, :destroy]
   resources :blogs
   resources :users, only: [:update, :create]
   get '/me', to: 'users#show'

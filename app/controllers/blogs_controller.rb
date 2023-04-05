@@ -31,10 +31,12 @@ class BlogsController < ApplicationController
 
   # PATCH/PUT /blogs/1
   def update
-    if @blog.update(blog_params)
-      render json: @blog
+    blog = Blog.find_by(id: params[:id])
+    if blog
+      blog.update!(blog_params)
+      render json: blog
     else
-      render json: @blog.errors, status: :unprocessable_entity
+      render json: {error: "unable to update"}, status: :unprocessable_entity
     end
   end
 
