@@ -7,7 +7,8 @@ ruby "3.1.2"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+# gem "sqlite3", "~> 1.4"
+gem 'pg'
 gem 'devise', '~> 4.9'
 gem 'serializer', '~> 1.0', '>= 1.0.2'
 gem 'active_model_serializers'
@@ -49,4 +50,6 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+
 
